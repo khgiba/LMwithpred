@@ -45,3 +45,7 @@ model.1 <- lm(SIMS~ARM,data=data)
 summary.lm(model.1)
 ```  
 
+```{r}
+model.2 <- lm(SIMS~GRIP ,data=data)
+summary.lm(model.2)
+``` 
