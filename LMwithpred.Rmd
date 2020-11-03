@@ -18,3 +18,30 @@ data <- read.csv(file="http://onlinestatbook.com/case_studies_rvls/physical_stre
 sep="", header=TRUE)  
 ```
 
+```{r include=FALSE}
+require(tidyverse)
+require(tigerstats)
+require(rgl)
+require(knitr)
+require (ggplot)
+```
+###Plot scatterplot
+
+```{r}
+plot(SIMS~ARM,data=data)  
+```   
+
+```{r}
+basicNN <- ggplot(data,aes(y=SIMS,x=ARM))  
+```
+##Now add in scatterplot
+
+```{r}
+basicNN + geom_point()+ geom_smooth(method=lm)
+```  
+
+```{r}
+model.1 <- lm(SIMS~ARM,data=data)
+summary.lm(model.1)
+```  
+
