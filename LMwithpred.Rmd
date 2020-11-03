@@ -73,9 +73,13 @@ summary.lm(model.3)
 new=data.frame(GRIP=94,ARM=88)
 predict.lm(model.3,new,interval="prediction")
 ``` 
+```{r}
+anova(model.1,model.3)
+```
 
-
-
+##Conclustion  
+The null hypothesis is that there is no difference in the models. Any one of them is as good as the other.  
+ We reject the Null Hypothesis,Based on the P Value being less than 0.5, and the R squared showed in Model 1is that Multiple R-squared:  0.4706,	Adjusted R-squared:  0.467 and in Model 3 shows, Multiple R-squared:  0.5422,	Adjusted R-squared:  0.5358, Model 3 is a better predictor than Model 1. 
 
 
 
