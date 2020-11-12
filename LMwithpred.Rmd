@@ -31,6 +31,8 @@ require (ggplot)
 plot(SIMS~ARM,data=data)  
 ```   
 
+In this plot it shows all the different arm ranges among the applicants. 
+
 ```{r}
 basicNN <- ggplot(data,aes(y=SIMS,x=ARM))  
 ```
@@ -39,6 +41,8 @@ basicNN <- ggplot(data,aes(y=SIMS,x=ARM))
 ```{r}
 basicNN + geom_point()+ geom_smooth(method=lm)
 ```  
+
+In this model it shows a straight line to give a better range between Sims and Arms too be able to get the best people to choose from for the job. 
 
 ```{r}
 model.1 <- lm(SIMS~ARM,data=data)
